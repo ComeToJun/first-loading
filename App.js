@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
+import * as SplashScreen from 'expo-splash-screen';
+import { Asset } from 'expo-asset';
+import Loading from './Loading';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReady: true,
+    };
+  }
+  componentDidMount = async () => {
+    setTimeout(
+      () =>
+        this.setState({
+          isReady: false,
+        }),
+      1600
+    );
+  };
+
+  render() {
+    const { isReady } = this.state;
+
+    return isReady ? (
+      <Loading />
+    ) : (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Image source={require('./assets/images/3.png')} />
+      </View>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
