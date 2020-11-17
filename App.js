@@ -1,9 +1,6 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
-import { Asset } from 'expo-asset';
+import { Image, View } from 'react-native';
 import Loading from './Loading';
-import { NavigationContainer } from '@react-navigation/native';
 
 export default class App extends React.Component {
   constructor(props) {

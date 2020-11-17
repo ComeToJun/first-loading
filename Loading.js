@@ -1,7 +1,5 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
-import { Asset } from 'expo-asset';
+import { Image, View } from 'react-native';
 
 export default function Loading() {
   return (

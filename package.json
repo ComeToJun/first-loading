@@ -20,8 +20,7 @@
     "react-native-gesture-handler": "^1.8.0",
     "react-native-screens": "^2.14.0",
     "react-native-video": "^5.1.0-alpha8",
-    "react-native-web": "~0.13.12",
-    "undefined": "react-native-community/masked-view"
+    "react-native-web": "~0.13.12"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
